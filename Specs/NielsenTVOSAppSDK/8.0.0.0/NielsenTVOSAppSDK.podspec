@@ -1,7 +1,8 @@
 Pod::Spec.new do |s|
     s.authors             = 'Nielsen'
     s.description         = 'Nielsen Digital Measurement SDK Framework.'
-    s.frameworks          = 'AdSupport', 'AppTrackingTransparency', 'SystemConfiguration', 'CoreLocation', 'AVFoundation'
+    s.frameworks          = 'AdSupport', 'SystemConfiguration', 'CoreLocation', 'AVFoundation'
+    s.weak_frameworks     = 'AppTrackingTransparency'
     s.library             = 'sqlite3'
     s.homepage            = 'http://www.nielsen.com'
     s.license             = { :text => 'Copyright 2020 Nielsen', :type => 'Copyright' }
