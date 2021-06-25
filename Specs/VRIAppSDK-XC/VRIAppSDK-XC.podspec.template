@@ -1,0 +1,21 @@
+Pod::Spec.new do |s|
+    s.description         = 'Digital Measurement SDK Framework.'
+    s.frameworks          = 'AdSupport', 'AppTrackingTransparency', 'CoreLocation', 'JavaScriptCore', 'WebKit', 'SystemConfiguration', 'AVFoundation'
+    s.library             = 'sqlite3'
+    s.license             = { :text => 'Copyright 2020', :type => 'Copyright' }
+    s.platform            = :ios, '9.0'
+    s.name                = 'VRIAppSDK-XC'
+    s.preserve_paths      = 'pod_build_xc.sh'
+    s.source              = { :http => 'https://raw.githubusercontent.com/nielsendigitalsdk/nielsenappsdk-ios-dynamic/master/XC/VRI/VRIAppSDK-XXX.zip' }
+    s.summary             = 'VRI App SDK.'
+    s.vendored_frameworks = 'AppApi.xcframework'
+    s.version             = 'XXX'
+    s.script_phases = [
+        {
+            :name => 'Pod Build Script',
+            :script => 'chmod a+x "${PODS_TARGET_SRCROOT}/pod_build_xc.sh"
+"${PODS_TARGET_SRCROOT}"/pod_build_xc.sh',
+            :execution_position => :before_compile
+        }
+    ]
+end
